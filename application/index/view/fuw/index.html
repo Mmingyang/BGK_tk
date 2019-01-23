@@ -1,0 +1,81 @@
+{extend name="layouts:main" /}
+{block name="title"}服务中心{/block}
+{block name="content"}
+
+<div class="container-fluid">
+    <div class="indexImg row">
+        <img src="/index/image/6.jpg" width="100%" height="200"/>
+    </div>
+    <div class="serviceList text-center">
+        <div class="container">
+            <div class="row">
+
+                {if condition="($Think.session.name==null)"}
+
+                   <script>window.location.href='http://wy.mys8178.cn/index/user/index.html';alert('请登录账号');</script>
+
+                {else /}
+
+                <div class="col-xs-4">
+                    <a href="{:url('tob/index')}">
+                        <div class="indexLabel label-default">
+                            <span class="glyphicon glyphicon-file"></span><br/>
+                            同步练习
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-xs-4">
+                    <a href="{:url('lin/index')}">
+                        <div class="indexLabel label-warning">
+                            <span class="glyphicon glyphicon-list-alt"></span><br/>
+                            历年真题
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-xs-4">
+                    <a href="{:url('xin/index')}">
+                        <div class="indexLabel label-primary">
+                            <span class="glyphicon glyphicon-book"></span><br/>
+                            最新押题
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-xs-4">
+                    <a href="{:url('kd/index')}">
+                        <div class="indexLabel label-success">
+                            <span class="glyphicon glyphicon-edit"></span><br/>
+                            考点
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-xs-4">
+                    <a href="{:url('sc/index')}">
+                        <div class="indexLabel label-info">
+                            <span class="glyphicon glyphicon-check"></span><br/>
+                            收藏库
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-xs-4">
+                    <a href="{:url('ctk/index')}">
+                        <div class="indexLabel label-danger">
+                            <span class="glyphicon glyphicon-warning-sign"></span><br/>
+                            错题库
+                        </div>
+                    </a>
+                </div>
+
+                {/if}
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+{/block}

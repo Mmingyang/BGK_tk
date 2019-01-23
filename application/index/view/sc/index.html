@@ -1,0 +1,18 @@
+{extend name="layouts:main" /}
+{block name="title"}课程简介{/block}
+{block name="content"}
+
+<div class="container-fluid">
+    {volist name="notices" id="notice"}
+    <div class="row noticeList">
+        <a href="{:url('section',['id'=>$notice->id])}">
+            <div class="col-xs-12">
+                <p class="title"><b>题目: </b><b>{$notice->title}</b></p>
+                <p class="info"> <span class="pull-right"><b> {:date("Y-m-d H:i:s",$notice->create_time)} </b></span></p>
+            </div>
+        </a>
+    </div>
+    {/volist}
+</div>
+
+{/block}

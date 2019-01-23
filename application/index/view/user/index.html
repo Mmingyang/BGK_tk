@@ -1,0 +1,38 @@
+{extend name="layouts:main" /}
+{block name="title"}个人中心{/block}
+{block name="content"}
+
+<div class="container">
+    <div class="blank"></div>
+    <div class="row">
+        <div class="col-xs-2">
+            <img src="{$user['logo']}" width="59" height="59">
+        </div>
+        <div class="col-xs-10" style="text-align:left">
+            <b>微信名称: {$user['name']}</b><br>
+            <b>地址: {$user['address']}</b><br>
+            <b>账号名: {$Think.session.name}</b><br>
+        </div>
+    </div>
+
+
+    <div class="blank"></div>
+    <div>
+        <ul class="list-group fuwuList">
+
+            {if condition="($Think.session.name==null)"}
+
+            <li class="list-group-item"><a href="{:url('users/login')}" class="text-danger"><span class="iconfont"></span>登录账号</a></li>
+
+            {else /}
+
+            <li class="list-group-item"><a href="{:url('users/logout')}" class="text-danger"><span class="iconfont"></span>退出登录</a></li>
+            <!--<li class="list-group-item"><a href="#" class="text-info"><span class="iconfont"></span>我的题库</a></li>-->
+
+            {/if}
+
+        </ul>
+    </div>
+</div>
+
+{/block}

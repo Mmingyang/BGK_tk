@@ -1,0 +1,53 @@
+{extend name="layouts:main" /}
+{block name="title"}练习习题{/block}
+{block name="content"}
+
+<div class="container-fluid">
+    <div class="blank"></div>
+    <form action="{:url('check',['id'=>$datas['id']])}" method="post">
+
+        <h3 class="noticeDetailTitle" style="text-align: center"><strong>简答题</strong></h3>
+        <h4 class="noticeDetailTitle" style="text-align: center"><strong>第 {$datas["top_id"]} 题: {$datas["title"]}</strong></h4><br>
+
+        <div style="text-align: center;">
+            <strong>
+                <b>请答题:</b>
+            </strong>
+
+            <br>
+
+            <strong>
+                <textarea rows="6" cols="25" name="answerA" placeholder="必填"></textarea>
+            </strong>
+
+            <br>
+
+            <strong>
+                <input type="submit" name="submit" value="提交" />
+            </strong>
+        </div>
+
+        <br>
+
+        <div class="col-xs-4" style="text-align: left">
+            <strong>
+                <a href="">上一题</a>
+            </strong>
+        </div>
+
+        <div class="col-xs-4" style="text-align: center">
+            <strong>
+                <a href="{:url('parse',['id'=>$datas['id']])}">真题解析</a>
+            </strong>
+        </div>
+
+        <div class="col-xs-4" style="text-align: right">
+            <strong>
+                <a href="{:url('next?page=$nextpage',['id'=>$datas['a_id']])}">下一题</a>
+            </strong>
+        </div>
+
+    </form>
+</div>
+
+{/block}

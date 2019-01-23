@@ -1,0 +1,21 @@
+{extend name="layouts:main" /}
+{block name="title"}课程简介{/block}
+{block name="content"}
+
+<div class="container-fluid">
+    {volist name="tobs" id="tob"}
+    <div class="row noticeList">
+        <a href="{:url('detail',['id'=>$tob->id])}">
+            <div class="col-xs-2">
+                <img class="noticeImg" src="{:get_file_path($tob->logo)}">
+            </div>
+            <div class="col-xs-10">
+                <p class="title">{$tob->title}</p>
+                <p class="info">浏览: {$tob->nums} <span class="pull-right"> {:date("Y-m-d H:i:s",$tob->create_time)} </span></p>
+            </div>
+        </a>
+    </div>
+    {/volist}
+</div>
+
+{/block}

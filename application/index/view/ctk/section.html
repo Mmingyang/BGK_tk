@@ -1,0 +1,71 @@
+{extend name="layouts:main" /}
+{block name="title"}练习习题{/block}
+{block name="content"}
+
+<style type="text/css" >
+
+    .font-spacing{
+        letter-spacing: 5px;
+        line-height: 40px;
+    }
+
+    input[type="radio"]+span {
+        width: 15px;
+        height: 15px;
+        background-color: #ddd;
+    }
+
+
+
+</style>
+
+<div class="container-fluid">
+    <div class="blank"></div>
+
+    <form action="#" method="post">
+        <div class="font-spacing">
+            <h3 class="noticeDetailTitle" style="text-align: center"><strong>单选题</strong></h3>
+            <h4 class="noticeDetailTitle" style="text-align: center"><strong>第 {$datas["top_id"]} 题: {$datas["title"]}</strong></h4>
+
+            <div style="text-align: center">
+                <div class="col-xs-2"></div>
+                <div class="col-xs-10" style="text-align: left">
+
+                    <strong>
+                        <label><input type="radio" name="true" value="0" /><span></span>A: {$datas["answerA"]}<br></label>
+                    </strong>
+
+                    <strong>
+                        <label><input type="radio" name="true" value="1" /><span></span>B: {$datas["answerB"]}<br></label>
+                    </strong>
+
+                    <strong>
+                        <label><input type="radio" name="true" value="2" /><span></span>C: {$datas["answerC"]}<br></label>
+                    </strong>
+
+                    <strong>
+                        <label><input type="radio" name="true" value="3" /><span></span>D: {$datas["answerD"]}<br></label>
+                    </strong>
+
+                </div>
+
+                <strong>
+                    <input type="submit" name="submit" value="提交" />
+                </strong>
+
+            </div>
+        </div>
+
+        <br>
+
+        <div class="col-xs-12" style="text-align: center">
+            <strong>
+                <h4><b>真题解析:</b></h4>
+                <h4><b>{$datas['parse']}</b></h4>
+            </strong>
+        </div>
+
+    </form>
+</div>
+
+{/block}

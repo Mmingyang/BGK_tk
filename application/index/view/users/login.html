@@ -1,0 +1,21 @@
+{extend name="layouts:main" /}
+{block name="title"}用户登录{/block}
+{block name="content"}
+
+<div class="container-fluid">
+    <form method="post">
+        <div class="form-group">
+            <label>您的姓名(必填):</label>
+            <input type="text" class="form-control" name="name">
+        </div>
+        <div class="form-group">
+            <label>您的密码(必填):</label>
+            <input type="password" class="form-control" name="password">
+        </div>
+        <div class="form-group">
+            <button class="btn btn-primary onlineBtn">登录</button>
+        </div>
+    </form>
+</div>
+
+{/block}

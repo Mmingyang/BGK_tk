@@ -1,0 +1,75 @@
+{extend name="layouts:main" /}
+
+
+{block name="content"}
+
+
+<div class="container-fluid">
+    <div class="indexImg row">
+        <img src="/index/image/zz.jpg" width="100%" />
+    </div>
+    <div class="serviceList text-center">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-xs-4">
+                    <a href="{:url('notice/index')}">
+                        <div class="indexLabel label-default">
+                            <span class="glyphicon glyphicon-list-alt"></span><br/>
+                            自考<br>(本科)
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-xs-4">
+                    <a href="{:url('service/index')}">
+                        <div class="indexLabel label-warning">
+                            <span class="glyphicon glyphicon-list-alt"></span><br/>
+                            自考<br>(人力资源)
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-xs-4">
+                    <a href="{:url('online/index')}">
+                        <div class="indexLabel label-info">
+                            <span class="glyphicon glyphicon-list-alt"></span><br/>
+                            自考<br>(汉语言本科)
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-xs-4">
+                    <a href="{:url('shops/index')}">
+                        <div class="indexLabel label-success">
+                            <span class="glyphicon glyphicon-list-alt"></span><br/>
+                            自考<br>(汉语言专科)
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-xs-4">
+                    <a href="{:url('zushou/index')}">
+                        <div class="indexLabel label-primary">
+                            <span class="glyphicon glyphicon-list-alt"></span><br/>
+                            会计<br>(从业资格证)
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-xs-4">
+                    <a href="{:url('event/index')}">
+                        <div class="indexLabel label-danger">
+                            <span class="glyphicon glyphicon-warning-sign"></span><br/>
+                            教师<br>(资格证)
+                        </div>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+{/block}
